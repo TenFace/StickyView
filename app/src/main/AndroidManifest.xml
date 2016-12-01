@@ -33,6 +33,9 @@
             android:name="com.tenface.StickyView.ui.activity.AboutActivity"
             android:screenOrientation="portrait"/>
         <activity
+            android:name="com.tenface.StickyView.ui.activity.MenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name="com.tenface.StickyView.ui.activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>

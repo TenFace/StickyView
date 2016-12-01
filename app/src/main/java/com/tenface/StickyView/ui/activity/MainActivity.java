@@ -109,6 +109,14 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         initData();
         initView();
         initListener();
+//        tvTitle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setClass(MainActivity.this,MenuActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
     private void initData() {
@@ -174,6 +182,13 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(mActivity, AboutActivity.class));
+            }
+        });
+
+        tvTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mActivity,MenuActivity.class));
             }
         });
 
