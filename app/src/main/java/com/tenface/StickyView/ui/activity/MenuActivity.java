@@ -14,7 +14,9 @@ import com.tenface.StickyView.R;
 import com.tenface.StickyView.view.SnakeMenuView.DividerItemDecoration;
 import com.tenface.StickyView.view.SnakeMenuView.TumblrRelativeLayout;
 
-
+/**
+ * Created by TenFace on 16/11/30.
+ */
 public class MenuActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;

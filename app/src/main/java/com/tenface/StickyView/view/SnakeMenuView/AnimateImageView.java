@@ -9,7 +9,7 @@ import com.facebook.rebound.Spring;
 import com.facebook.rebound.SpringSystem;
 
 /**
- * Created by xmuSistone.
+ * Created by TenFace on 16/11/30.
  */
 public class AnimateImageView extends FloatingActionButton {
     private Spring springX, springY;

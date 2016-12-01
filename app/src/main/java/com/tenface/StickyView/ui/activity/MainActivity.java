@@ -1,20 +1,30 @@
 package com.tenface.StickyView.ui.activity;
 
+import android.animation.Animator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AbsListView;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tenface.StickyView.R;
 import com.tenface.StickyView.adapter.TravelingAdapter;
@@ -26,6 +36,7 @@ import com.tenface.StickyView.model.OperationEntity;
 import com.tenface.StickyView.model.TravelingEntity;
 import com.tenface.StickyView.util.ColorUtil;
 import com.tenface.StickyView.util.DensityUtil;
+import com.tenface.StickyView.util.KickBackAnimator;
 import com.tenface.StickyView.util.ModelUtil;
 import com.tenface.StickyView.util.SystemStatusManager;
 import com.tenface.StickyView.view.FilterView;
@@ -35,6 +46,7 @@ import com.tenface.StickyView.view.HeaderView.HeaderDividerViewView;
 import com.tenface.StickyView.view.HeaderView.HeaderFilterViewView;
 import com.tenface.StickyView.view.HeaderView.HeaderOperationViewView;
 import com.tenface.StickyView.view.SmoothListView.SmoothListView;
+import com.tenface.StickyView.view.SnakeMenuView.TumblrRelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +55,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by tenface on 16/11/30.
+ * Created by TenFace on 16/11/30.
  */
 public class MainActivity extends AppCompatActivity implements SmoothListView.ISmoothListViewListener {
 
@@ -65,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
     private Context mContext;
     private Activity mActivity;
     private int mScreenHeight; // 屏幕高度
+    private Dialog dialog;
 
     private List<String> adList = new ArrayList<>(); // 广告数据
     private List<ChannelEntity> channelList = new ArrayList<>(); // 频道数据
@@ -93,6 +106,9 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
     private int filterViewPosition = 4; // 筛选视图的位置
     private int filterViewTopSpace; // 筛选视图距离顶部的距离
 
+    private View.OnClickListener menuClickListener;
+
+
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -109,14 +125,6 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         initData();
         initView();
         initListener();
-//        tvTitle.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.setClass(MainActivity.this,MenuActivity.class);
-//                startActivity(intent);
-//            }
-//        });
     }
 
     private void initData() {
@@ -174,6 +182,19 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         smoothListView.setAdapter(mAdapter);
 
         filterViewPosition = smoothListView.getHeaderViewsCount() - 1;
+
+        //menu点击事件
+        menuClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(MainActivity.this, "menu click", Toast.LENGTH_LONG).show();
+                showDialog();
+            }
+        };
+        TumblrRelativeLayout rootLayout = (TumblrRelativeLayout) findViewById(R.id.tumblr_frame_layout);
+        rootLayout.setMenuListener(menuClickListener);
+
+
     }
 
     private void initListener() {
@@ -188,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mActivity,MenuActivity.class));
+                startActivity(new Intent(mActivity, MenuActivity.class));
             }
         });
 
@@ -245,7 +266,8 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         smoothListView.setSmoothListViewListener(this);
         smoothListView.setOnScrollListener(new SmoothListView.OnSmoothScrollListener() {
             @Override
-            public void onSmoothScrolling(View view) {}
+            public void onSmoothScrolling(View view) {
+            }
 
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
@@ -258,7 +280,7 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
 
                 // 获取广告头部View、自身的高度、距离顶部的高度
                 if (itemHeaderAdView == null) {
-                    itemHeaderAdView = smoothListView.getChildAt(1-firstVisibleItem);
+                    itemHeaderAdView = smoothListView.getChildAt(1 - firstVisibleItem);
                 }
                 if (itemHeaderAdView != null) {
                     adViewTopSpace = DensityUtil.px2dip(mContext, itemHeaderAdView.getTop());
@@ -319,7 +341,7 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
             fraction = 1f - adViewTopSpace * 1f / 60;
             if (fraction < 0f) fraction = 0f;
             rlBar.setAlpha(fraction);
-            return ;
+            return;
         }
 
         float space = Math.abs(adViewTopSpace) * 1f;
@@ -393,5 +415,198 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         tintManager.setStatusBarTintResource(0);
         tintManager.setNavigationBarTintEnabled(true);
     }
+
+    private void showDialog() {
+        dialog = new Dialog(mContext, R.style.my_dialog_style);
+        dialog.setCancelable(true);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.dialog_layout, null);
+//        dialog.getWindow().setBackgroundDrawable();
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setContentView(view, new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT));
+        dialog.show();
+        final ImageView img01 = (ImageView) view.findViewById(R.id.img_01);
+        final ImageView img02 = (ImageView) view.findViewById(R.id.img_02);
+        final ImageView img03 = (ImageView) view.findViewById(R.id.img_03);
+        final ImageView img04 = (ImageView) view.findViewById(R.id.img_04);
+        final ImageView img05 = (ImageView) view.findViewById(R.id.img_05);
+        final ImageView img06 = (ImageView) view.findViewById(R.id.img_06);
+        // 这几个show和close的操作千万不要用集合循环去操作，否则在显示dialog时会出现dialog闪一下就消失的情况
+        showAnim(img01, 100);
+        showAnim(img02, 200);
+        showAnim(img03, 300);
+        showAnim(img04, 400);
+        showAnim(img05, 500);
+        showAnim(img06, 550);
+        img01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img06, 300, 0);
+                closeAnim(img05, 250, 0);
+                closeAnim(img04, 200, 0);
+                closeAnim(img03, 150, 800);
+                closeAnim(img02, 100, 800);
+                closeAnim(img01, 50, 800);
+            }
+        });
+        img02.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img06, 300, 0);
+                closeAnim(img05, 250, 0);
+                closeAnim(img04, 200, 0);
+                closeAnim(img03, 150, 800);
+                closeAnim(img02, 100, 800);
+                closeAnim(img01, 50, 800);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.putExtra("img", "这是日历页面");
+                startActivity(intent);
+            }
+        });
+        img03.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img06, 300, 0);
+                closeAnim(img05, 250, 0);
+                closeAnim(img04, 200, 0);
+                closeAnim(img03, 150, 800);
+                closeAnim(img02, 100, 800);
+                closeAnim(img01, 50, 800);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.putExtra("img", "这是电话页面");
+                startActivity(intent);
+            }
+        });
+        img04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img06, 300, 0);
+                closeAnim(img05, 250, 0);
+                closeAnim(img04, 200, 0);
+                closeAnim(img03, 150, 800);
+                closeAnim(img02, 100, 800);
+                closeAnim(img01, 50, 800);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.putExtra("img", "这是天气页面");
+                startActivity(intent);
+            }
+        });
+        img05.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img06, 300, 0);
+                closeAnim(img05, 250, 0);
+                closeAnim(img04, 200, 0);
+                closeAnim(img03, 150, 800);
+                closeAnim(img02, 100, 800);
+                closeAnim(img01, 50, 800);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.putExtra("img", "这是定位页面");
+                startActivity(intent);
+            }
+        });
+
+        img06.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeAnim(img06, 300, 0);
+                closeAnim(img05, 250, 0);
+                closeAnim(img04, 200, 0);
+                closeAnim(img03, 150, 800);
+                closeAnim(img02, 100, 800);
+                closeAnim(img01, 50, 800);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.putExtra("img", "这是设置页面");
+                startActivity(intent);
+            }
+        });
+
+    }
+
+    private void showAnim(final ImageView i, int d) {
+        i.setVisibility(View.INVISIBLE);
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                i.setVisibility(View.VISIBLE);
+                ValueAnimator fadeAnim = ObjectAnimator.ofFloat(i, "translationY", 1000, 0);
+                fadeAnim.setDuration(700);
+                KickBackAnimator kickAnimator = new KickBackAnimator();
+                kickAnimator.setDuration(700);
+                fadeAnim.setEvaluator(kickAnimator);
+                fadeAnim.start();
+                fadeAnim.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        i.clearAnimation();
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                    }
+                });
+            }
+        }, d);
+    }
+
+    private void closeAnim(final ImageView img, int i, int j) {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ValueAnimator fadeAnim = ObjectAnimator.ofFloat(img, "translationY", 0, 1000);
+                fadeAnim.setDuration(700);
+                KickBackAnimator kickAnimator = new KickBackAnimator();
+                kickAnimator.setDuration(700);
+                fadeAnim.setEvaluator(kickAnimator);
+                fadeAnim.start();
+                fadeAnim.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        // TODO Auto-generated method stub
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) {
+                        // TODO Auto-generated method stub
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        img.setVisibility(View.INVISIBLE);
+                        img.clearAnimation();
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) {
+                        // TODO Auto-generated method stub
+                    }
+                });
+            }
+        }, i);
+        if (img.getId() == R.id.img_01) {
+            mHandler.postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    dialog.dismiss();
+                }
+            }, j);
+        }
+    }
+
 
 }

@@ -1,5 +1,6 @@
 package com.tenface.StickyView.util;
 
+import com.tenface.StickyView.R;
 import com.tenface.StickyView.model.ChannelEntity;
 import com.tenface.StickyView.model.FilterEntity;
 import com.tenface.StickyView.model.FilterTwoEntity;
@@ -25,29 +26,29 @@ public class ModelUtil {
     // 广告数据
     public static List<String> getAdData() {
         List<String> adList = new ArrayList<>();
-        adList.add("http://img0.imgtn.bdimg.com/it/u=1270781761,1881354959&fm=21&gp=0.jpg");
-        adList.add("http://img0.imgtn.bdimg.com/it/u=2138116966,3662367390&fm=21&gp=0.jpg");
-        adList.add("http://img0.imgtn.bdimg.com/it/u=1296117362,655885600&fm=21&gp=0.jpg");
+        adList.add("https://github.com/TenFace/StickyViewImage/blob/master/jingse.jpg?raw=true");
+        adList.add("https://github.com/TenFace/StickyViewImage/blob/master/loushang.jpg?raw=true");
+        adList.add("https://github.com/TenFace/StickyViewImage/blob/master/xiaozhang.jpg?raw=true");
         return adList;
     }
 
     // 频道数据
     public static List<ChannelEntity> getChannelData() {
         List<ChannelEntity> channelList = new ArrayList<>();
-        channelList.add(new ChannelEntity("中国", "天安门", "http://img2.imgtn.bdimg.com/it/u=2850936076,2080165544&fm=206&gp=0.jpg"));
-        channelList.add(new ChannelEntity("美国", "白宫", "http://img3.imgtn.bdimg.com/it/u=524208507,12616758&fm=206&gp=0.jpg"));
-        channelList.add(new ChannelEntity("英国", "伦敦塔桥", "http://img3.imgtn.bdimg.com/it/u=698582197,4250615262&fm=206&gp=0.jpg"));
-        channelList.add(new ChannelEntity("德国", "城堡", "http://img5.imgtn.bdimg.com/it/u=1467751238,3257336851&fm=11&gp=0.jpg"));
-        channelList.add(new ChannelEntity("西班牙", "巴塞罗那", "http://img5.imgtn.bdimg.com/it/u=3191365283,111438732&fm=21&gp=0.jpg"));
-        channelList.add(new ChannelEntity("意大利", "比萨斜塔", "http://img5.imgtn.bdimg.com/it/u=482494496,1350922497&fm=206&gp=0.jpg"));
+        channelList.add(new ChannelEntity("每次", "我", "https://github.com/TenFace/StickyViewImage/blob/master/icon1.png?raw=true"));
+        channelList.add(new ChannelEntity("过年", "爱", "https://github.com/TenFace/StickyViewImage/blob/master/icon2.png?raw=true"));
+        channelList.add(new ChannelEntity("都会", "你", "https://github.com/TenFace/StickyViewImage/blob/master/icon3.png?raw=true"));
+        channelList.add(new ChannelEntity("想起", "我", "https://github.com/TenFace/StickyViewImage/blob/master/icon4.png?raw=true"));
+        channelList.add(new ChannelEntity("我的家", "的", "https://github.com/TenFace/StickyViewImage/blob/master/icon5.png?raw=true"));
+        channelList.add(new ChannelEntity("我的家人", "家", "https://github.com/TenFace/StickyViewImage/blob/master/icon6.png?raw=true"));
         return channelList;
     }
 
     // 运营数据
     public static List<OperationEntity> getOperationData() {
         List<OperationEntity> operationList = new ArrayList<>();
-        operationList.add(new OperationEntity("度假游", "度假的天堂", "http://img2.imgtn.bdimg.com/it/u=4081165325,36916497&fm=21&gp=0.jpg"));
-        operationList.add(new OperationEntity("蜜月游", "浪漫的港湾", "http://img4.imgtn.bdimg.com/it/u=4141168524,78676102&fm=21&gp=0.jpg"));
+        operationList.add(new OperationEntity("我的家", "幸福的港湾", "https://github.com/TenFace/StickyViewImage/blob/master/icon9.jpg?raw=true"));
+        operationList.add(new OperationEntity("一家人", "一生的守候", "https://github.com/TenFace/StickyViewImage/blob/master/icon7.png?raw=true"));
         return operationList;
     }
 

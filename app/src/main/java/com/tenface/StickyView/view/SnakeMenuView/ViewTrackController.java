@@ -3,7 +3,7 @@ package com.tenface.StickyView.view.SnakeMenuView;
 import java.util.List;
 
 /**
- * Created by xmuSistone
+ * Created by TenFace on 16/11/30.
  */
 public class ViewTrackController {
     private List<AnimateImageView> imageViewList;

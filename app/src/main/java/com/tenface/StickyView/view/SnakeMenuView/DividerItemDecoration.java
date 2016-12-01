@@ -9,8 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * 此为RecyclerView的分割线
- * Created by xmuSistone
+ * Created by TenFace on 16/11/30.
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     private int dividerColor;

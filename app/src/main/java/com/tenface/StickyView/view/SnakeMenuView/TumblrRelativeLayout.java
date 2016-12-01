@@ -21,7 +21,8 @@ import java.util.List;
 
 /**
  * 该类跟普通RelativeLayout的用法是一样一样的
- * Created by xmuSistone.
+ **
+ * Created by TenFace on 16/11/30.
  */
 public class TumblrRelativeLayout extends RelativeLayout {
 
@@ -130,7 +131,7 @@ public class TumblrRelativeLayout extends RelativeLayout {
         @Override
         public int getViewVerticalDragRange(View child) {
             // 这个用来控制拖拽过程中松手后，自动滑行的速度
-            return 1;
+            return 2;
         }
 
         @Override

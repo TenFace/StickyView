@@ -146,8 +146,8 @@ public class HeaderAdViewView extends HeaderViewInterface<List<String>> {
                 public void run() {
                     // 当没离开该页面时一直转
                     while (!isStopThread) {
-                        // 每隔5秒转一次
-                        SystemClock.sleep(5000);
+                        // 每隔10秒转一次
+                        SystemClock.sleep(10000);
                         // 在主线程更新界面
                         mHandler.sendEmptyMessage(TYPE_CHANGE_AD);
                     }
