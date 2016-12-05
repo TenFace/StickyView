@@ -57,4 +57,485 @@
 
     <color name="color9">#263238</color>
 
+
+
+
+
+
+
+
+
+        <!-- 颜色定义 -->
+        <color name="all_money_data_textcolor">@color/_545454</color>
+        <color name="main_textcolor">@color/_333333</color>
+        <color name="tab_level2_textcolor">@color/_333333</color>
+        <color name="index_textcolor">@color/_676769</color>
+        <color name="colorfull_bg_textcolor">@color/_ffffff</color>
+        <color name="auxiliary_textcolor">@color/_9b9b9d</color>
+        <color name="listview_textcolor">@color/_ffffff</color>
+        <color name="second_textcolor">@color/_676769</color>
+        <color name="main_bgcolor">@color/_f6f6f8</color>
+        <color name="divider_line_color">@color/_d6d6d9</color>
+        <color name="dotted_line_color">@color/_d6d6d9</color>
+        <color name="stock_stop_color">@color/_89898b</color>
+        <color name="stock_up_color">@color/_e84b4b</color>
+        <color name="stock_down_color">@color/_29ae1b</color>
+        <color name="main_color">@color/_328deb</color>
+        <color name="title_textcolor">@color/_328deb</color>
+        <color name="button_focus_textcolor_in_blue_bg">#ffffff00</color>
+        <!-- 颜色库 -->
+        <color name="_545454">#ff545454</color>
+        <color name="_9b9b9d">#ff9b9b9d</color>
+        <color name="_d6d6d9">#ffd6d6d9</color>
+        <color name="_89898b">#ff89898b</color>
+        <color name="_e84b4b">#55e84b4b</color>
+        <color name="_29ae1b">#ff29ae1b</color>
+        <color name="_a3a3a4">#ffa3a3a4</color>
+        <color name="_c6c6c8">#ffc6c6c8</color>
+        <color name="_ededf0">#ffededf0</color>
+        <color name="_feebcf">#fffeebcf</color>
+        <color name="_ececee">#ffececee</color>
+        <color name="_f0f0f0">#fff0f0f0</color>
+        <color name="_fffe83">#fffffe83</color>
+        <color name="_b06dd3">#ffb06dd3</color>
+        <color name="_5c5c5c">#5c5c5c</color>
+        <color name="_f2f2f2">#f2f2f2</color>
+        <color name="_f24957">#f24957</color>
+        <color name="_454545">#454545</color>
+        <color name="_c7c7cc">#c7c7cc</color>
+        <color name="_eeeeee">#eeeeee</color>
+        <color name="_F1F0EE">#F1F0EE</color>
+        <color name="_dbdbdb">#dbdbdb</color>
+        <color name="_b6b6b6">#b6b6b6</color>
+        <color name="_f4f4f4">#f4f4f4</color>
+
+        <!-- 公用颜色 -->
+        <color name="_ffffff">#ffffffff</color>
+        <color name="shallow_background_green">#ff109a01</color>
+        <color name="shallow_background_yellow">#ffee9801</color>
+        <color name="shallow_background_gray">#ff373737</color>
+        <color name="_328deb">#ff328deb</color>
+        <color name="_676769">#676769</color>
+        <color name="shallow_background_red">#fff00000</color>
+        <color name="deep_background_red">#ffff1717</color>
+        <color name="deep_background_green">#ff17e100</color>
+        <color name="deep_background_yellow">#fff2e400</color>
+        <color name="deep_background_gray">#ff969696</color>
+        <color name="_f6f6f8">#f6f6f8</color>
+        <color name="light_background_yellow">#ffee9801</color>
+        <color name="keyboard_exist_mystock_textcolor">#ff969696</color>
+        <color name="buy_stock_label_color">#ff494949</color>
+        <color name="buy_sell_bg_color">#fff5f2f2</color>
+        <color name="caiwu_label_color">#ffb7b7b7</color>
+        <color name="white_list_bg">#FFFFFF</color>
+        <color name="background_gray">#ffececec</color>
+        <color name="gray">#eeeeee</color>
+        <color name="_676768">#676768</color>
+        <color name="stock_head_title_bg">#9b9b9c</color>
+        <color name="red">#ffe50d22</color>
+        <color name="green">#ff00b800</color>
+        <color name="yellow">#ffedd927</color>
+        <color name="blue">#ff314a9c</color>
+        <color name="dim_foreground_dark_inverse">#323232</color>
+        <color name="k_bg_blue">#ff00213f</color>
+        <color name="indexbar_marqueen_bg">#ff121212</color>
+        <color name="tab_line_red">#f24957</color>
+        <color name="tab_line_no_select">#676769</color>
+        <color name="five_price_selected_color">#ff19437d</color>
+        <!-- For date picker widget -->
+
+
+        <!-- info background -->
+        <color name="info_title_color">#ff393939</color>
+
+        <!-- For settings framework -->
+
+
+        <!-- For security permissions -->
+        <color name="trade_list_selected_bg_color">#ffd8d8d8</color>
+        <color name="widget_btn_selected_color">#88aaaaaa</color>
+        <color name="home_text_1n_color">#ffd86c22</color>
+        <color name="home_text_2n_color">#ffffffff</color>
+        <color name="home_text_3n_color">#ffd9a481</color>
+
+        <!-- 整体布局 -->
+        <color name="winner_transparent">#00000000</color>
+
+        <!-- 基金列表字体颜色 -->
+        <color name="fund_color">#ffd5d5d5</color>
+
+        <!-- title -->
+        <color name="title_button_color">#ffffffff</color>
+
+        <!-- home -->
+        <color name="home_bg">#ffececec</color>
+        <color name="home_text_color">#ff373737</color>
+
+        <!-- stock list -->
+        <color name="stock_name_color">#454545</color>
+        <color name="stock_code_color">#9b9b9d</color>
+        <color name="stock_amount_color">#ffeaea00</color>
+        <color name="stock_price_color">#ffd5d5d5</color>
+        <color name="stock_updown_amount_color">#ffffffff</color>
+        <color name="stock_updown_persent_color">#ffffffff</color>
+
+        <!-- trade color red and green -->
+        <color name="trade_green">#ff097c25</color>
+        <color name="trade_detailleft">#ff373737</color>
+        <color name="trade_detailright">#ff373737</color>
+        <color name="tradetablecolor">#ff000000</color>
+        <color name="tradebgcolor">#ffececec</color>
+
+        <!-- 默认按钮字体颜色 -->
+        <color name="normal_btn_color">#ff373737</color>
+        <color name="quote_title_line_bg_color">#ff131212</color>
+        <color name="quote_title_stock_name_color">#676769</color>
+        <!-- 定义皮肤的颜色 -->
+        <!-- 皮肤1默认 -->
+        <!-- 大盘指数名字颜色 -->
+        <color name="skin1_home_zs_name_color">#ff000000</color>
+        <!-- 大盘指数金额颜色 -->
+        <color name="skin1_home_zs_money_color">#ff000000</color>
+        <!-- 资讯标题栏文字颜色 -->
+        <color name="skin1_home_new_titletext_color">#ff000000</color>
+        <!-- 资讯listview文字颜色 -->
+        <color name="skin1_home_new_listtext_color">#ff0042ff</color>
+        <!-- 资讯背景颜色 -->
+        <color name="skin1_home_new_bg_color">#ffffffff</color>
+        <!-- 功能栏按钮文字颜色 -->
+        <color name="skin1_home_function_text_color">#ff000000</color>
+        <!-- 我的自选股票名字颜色 -->
+        <color name="skin1_home_mystock_name_color">#ff000000</color>
+        <!-- 我的自选股票代码颜色 -->
+        <color name="skin1_home_mystock_code_color">#ff000000</color>
+        <!-- 我的自选股票价格颜色 -->
+        <color name="skin1_home_mystock_price_color">#ff000000</color>
+        <!-- 公告字体颜色 -->
+        <color name="skin1_home_notice_text_color">#ff000000</color>
+
+        <!-- 皮肤2默认 -->
+        <!-- 大盘指数名字颜色 -->
+        <color name="skin2_home_zs_name_color">#ff373737</color>
+        <!-- 大盘指数金额颜色 -->
+        <color name="skin2_home_zs_money_color">#ff373737</color>
+        <!-- 资讯listview文字颜色 -->
+        <color name="skin2_home_new_listtext_color">#ff0042ff</color>
+        <!-- 资讯背景颜色 -->
+        <color name="skin2_home_new_bg_color">#ffececec</color>
+        <!-- 功能栏按钮文字颜色 -->
+        <color name="skin2_home_function_text_color">#ff691107</color>
+        <!-- 我的自选股票名字颜色 -->
+        <color name="skin2_home_mystock_name_color">#ff000000</color>
+        <!-- 我的自选股票代码颜色 -->
+        <color name="skin2_home_mystock_code_color">#ff808080</color>
+        <!-- 我的自选股票价格颜色 -->
+        <color name="skin2_home_mystock_price_color">#ff000000</color>
+        <!-- 我的自选股票涨跌颜色 -->
+        <color name="skin2_home_mystock_updownpercent_color">#ffe4e4e4</color>
+        <!-- 公告字体颜色 -->
+        <color name="skin2_home_notice_text_color">#ffFFFFFF</color>
+        <color name="popup_bg_color">#ffCED3D6</color>
+
+        <!-- splash 下方启动中的几个字体颜色 -->
+        <color name="splash_text_color">@color/white</color>
+        <!-- 注册页面字体颜色 -->
+        <color name="register_text_color">@color/white</color>
+
+        <!-- 综合屏页面详情字体颜色 -->
+        <color name="colligate_detail_text_color">#ff898989</color>
+        <color name="colligate_stock_infomation">#333333</color>
+        <color name="colligate_little_dim">#ffacc8d3</color>
+        <color name="colligate_dim">#ff595959</color>
+        <color name="ddx_border_color">#ff333333</color>
+        <color name="ddx_super_in_color">#ff0f1f</color>
+        <color name="ddx_super_out_color">#1ee61e</color>
+        <color name="ddx_large_in_color">#d80818</color>
+        <color name="ddx_large_out_color">#19bf19</color>
+        <color name="ddx_middle_in_color">#b30b16</color>
+        <color name="ddx_middle_out_color">#149614</color>
+        <color name="ddx_small_in_color">#8c0811</color>
+        <color name="ddx_small_out_color">#0f730f</color>
+        <color name="quote_title_sortable_color">#ff676769</color>
+
+        <!-- 底部菜单背景色 -->
+        <color name="bottomMenuView_bg">#ff251F21</color>
+        <!-- 边框色 -->
+        <color name="bottomMenuView_biankuang">#ff3D393A</color>
+
+        <!-- 键盘标题颜色 -->
+        <color name="KEYBOARD_BUTTON">#FF373737</color>
+        <!-- end -->
+
+
+        <!-- 消息中心资讯颜色 -->
+        <color name="msg_center_title_color">#FF1861b1</color>
+        <color name="msg_center_date_color">#FF727272</color>
+        <!-- END -->
+
+
+        <!-- 交易委托页面持仓列表头部颜色 -->
+        <color name="trade_chicang_title_color">#FF757575</color>
+
+        <!-- 兴业push -->
+        <color name="list_background">#EFEFEF</color>
+        <color name="list_detail">#ADADAD</color>
+        <color name="list_line">#edf2f5</color>
+        <color name="list_module_line">#e4e8eb</color>
+        <color name="show_title">#424242</color>
+        <color name="show_detail">#636363</color>
+        <color name="pull_header_text_color">#ff646464</color>
+        <color name="_dddddd">#ffdddddd</color>
+        <color name="_ff4e08">#ffff4e08</color>
+        <color name="_f6f6f7">#f6f6f7</color>
+        <color name="scroll_menu_background">#f3f3f4</color>
+        <color name="scroll_menu_text">#ff383838</color>
+        <color name="scroll_menu_bottom_bar">#ffe32832</color>
+        <color name="expand_list_group_background">#ffededed</color>
+        <color name="expand_list_group_h_background">#fff7ecd9</color>
+        <color name="expand_list_child_background">#fff3f3f4</color>
+        <color name="expand_list_child_title_text">#ff3a3a3a</color>
+        <color name="expand_list_child_tip_text">#ff909090</color>
+        <color name="expand_list_divider">#ffbababa</color>
+        <color name="expand_list_child_divider">#ff909090</color>
+        <color name="app_bg">#fff3f3f4</color>
+        <color name="_5b5b5b">#ff5b5b5b</color>
+        <color name="_ebebeb">#ffebebeb</color>
+        <color name="_fafafa">#fffafafa</color>
+        <color name="_a24a33">#ffa24a33</color>
+        <color name="_971f26">#ff971f26</color>
+        <color name="_f6edd9">#fff6edd9</color>
+        <color name="_e4d5b7">#ffe4d5b7</color>
+        <color name="_e2e2e2">#e2e2e2</color>
+        <color name="_868686">#ff868686</color>
+        <!-- 东海商城 -->
+        <color name="product_store_detail_line_color">#ffdddddd</color>
+        <color name="product_store_detail_bgd_color">#ffededed</color>
+        <color name="product_store_detail_bgd_white">#fffafafa</color>
+        <color name="product_store_detail_bgd_gray">#fff3f3f4</color>
+        <color name="product_store_detail_text_color">#ff3a3a3a</color>
+        <color name="product_store_text_black">#ff383838</color>
+        <color name="product_store_text_black_1">#ff545454</color>
+        <color name="product_store_text_red">#ffe30412</color>
+        <color name="product_store_text_gray">#ff909090</color>
+        <color name="product_store_text_blue">#ff3d73a5</color>
+        <color name="product_store_text_blue_1">#ff246fce</color>
+        <color name="product_store_text_orange">#ffff7c22</color>
+        <color name="product_store_list_bgd">#fff3f3f4</color>
+        <color name="product_page_bg">#fffafafa</color>
+        <color name="product_divide_color">#ffcfcfcf</color>
+        <color name="_e30412">#ffe30412</color>
+        <color name="_d2d2d2">#ffd2d2d2</color>
+        <color name="_cdcdcd">#ffcdcdcd</color>
+        <color name="_003f97">#ff003f97</color>
+        <color name="_cccccc">#ffcccccc</color>
+        <color name="_cbcbcb">#ffcbcbcb</color>
+        <color name="_333333">#ff333333</color>
+        <color name="_222222">#ff222222</color>
+        <color name="_666666">#ff666666</color>
+        <color name="_89898d">#89898d</color>
+        <color name="_d6d6d7">#d6d6d7</color>
+        <color name="_ffa600">#ffa600</color>
+        <!-- 新版本交易颜色 -->
+        <color name="_d7d7d8">#ffd7d7d8</color>
+        <color name="_82733c">#ff82733c</color>
+
+        <!-- 小方版本颜色 -->
+        <color name="_ffa473">#ffa473</color>
+        <color name="_b4a46b">#ffb4a46b</color>
+        <color name="title_bg_red">#f24957</color>
+        <color name="title_bg_green">#07ae4c</color>
+        <color name="_b9b9b9">#b9b9b9</color>
+
+        <color name="index_div">#c7b886</color>
+        <color name="stock_list_up">#f24957</color>
+        <color name="stock_list_balance">#89898B</color>
+        <color name="_e3e3e3">#e3e3e3</color>
+        <color name="stock_list_down">#07ae4c</color>
+        <color name="_b3b3b3">#b3b3b3</color>
+        <color name="_4a69f0">#4a69f0</color>
+        <color name="stock_detail_no_data">#9d9d9c</color>
+        <color name="my_stock_empty">#f0f0f0</color>
+        <color name="all_bg">#fcfcfc</color>
+        <color name="_999999">#ff999999</color>
+        <color name="fz_color_red">#d80c18</color>
+        <color name="fz_color_green">#149614</color>
+        <color name="hint_color_green">#e6e6e6</color>
+        <color name="_b9ac7e">#b9ac7e</color>
+        <!-- 我的信息页面颜色 -->
+        <color name="title_self_information">#F8F8F8</color>
+        <color name="back_self_information">#F0F0F0</color>
+        <color name="text_self_information">#333333</color>
+        <color name="title_my_setting">#000000</color>
+        <color name="bg_my_setting">#f5f8fa</color>
+        <color name="text_my_setting">#000f1a</color>
+        <color name="text_time">#999999</color>
+        <color name="text_back">#FAFAFA</color>
+        <color name="button_normal">#999999</color>
+        <color name="button_pressed">#ffffff</color>
+        <color name="trade_total_money_alert">#666666</color>
+        <color name="trade_amount_error_alert">#ffffff</color>
+        <color name="text_orange">#ff7030</color>
+        <color name="text_deep_blue">#0864a1</color>
+        <color name="grey_text_orange">#66ff7030</color>
+        <color name="grey_text_deep_blue">#660864a1</color>
+        <color name="new_share_gift_text_title">#e63256</color>
+        <color name="new_share_gift_text">#4a5359</color>
+        <color name="new_share_gift_btn">#4d000f1a</color>
+        <color name="new_share_gift_bg">#fffbf9</color>
+
+        <color name="text_blue">#328deb</color>
+        <color name="text_green">#149614</color>
+        <color name="bg_white">#ffffff</color>
+        <color name="divider_light_gray">#d5d5d6</color>
+        <color name="bg_view_clicked">#f7f7f7</color>
+        <color name="normal_edittext_color">#1a1a1a</color>
+        <color name="bg_black_home_main">#09141a</color>
+        <color name="bg_home_page_title">#7a848a</color>
+
+        <color name="text_gray">#939799</color>
+        <color name="text_deep_purple">#e6174e</color>
+        <color name="bg_gray">#f0f3f5</color>
+        <color name="bg_white_30alpha">#4dffffff</color>
+        <color name="title_text_color_white">#fff</color>
+        <color name="bg_14171a">#14171a</color>
+        <color name="bg_abb0b3">#abb0b3</color>
+        <color name="alpha_30_000f1a">#4c000f1a</color>
+        <color name="bg_000f1a">#000f1a</color>
+        <color name="bg_f5faf8">#f5faf8</color>
+        <color name="bg_dce2e6">#dce2e6</color>
+        <color name="bg_white_50alpha">#80ffffff</color>
+        <color name="bg_white_60alpha">#9Affffff</color>
+        <color name="bg_white_69alpha">#B1ffffff</color>
+        <color name="bg_white_80alpha">#bbffffff</color>
+        <color name="bg_white_10alpha">#1affffff</color>
+        <color name="bg_000f1a_60alpha">#9A000f1a</color>
+        <color name="bg__see_large_kline">#e4e4e4</color>
+        <color name="bg_new_home_page">#09141a</color>
+        <color name="text_optional_stock_green">#00a881</color>
+        <color name="text_optional_stock_red">#e63256</color>
+        <color name="bg_optional_stock_red">#96102b</color>
+        <color name="bg_optional_stock_green">#11703f</color>
+        <color name="bg_optional_stock_black">#192229</color>
+        <color name="bg_optional_stock_black_pressed">#1f2a33</color>
+        <color name="bg_optional_stock_gray">#4a5359</color>
+        <color name="text_4d4d4d">#4d4d4d</color>
+        <color name="text_5d6970">#5d6970</color>
+        <color name="text_75alpha">#C0EEE8D4</color>
+        <color name="bg_20282d">#20282d</color>
+        <color name="bg_3d464d">#3d464d</color>
+        <color name="black_dex_super_in">#ff3860</color>
+        <color name="black_dex_large_in">#e63256</color>
+        <color name="black_dex_middle_in">#bf2a48</color>
+        <color name="black_dex_small_in">#99223a</color>
+        <color name="black_dex_super_out">#00f5bc</color>
+        <color name="black_dex_large_out">#00cf9e</color>
+        <color name="black_dex_middle_out">#00a881</color>
+        <color name="black_dex_small_out">#008264</color>
+        <color name="bg_eaeaeb">#eaeaeb</color>
+        <color name="bg_e6eaed">#e6eaed</color>
+        <color name="bg_f5f8fa">#f5faf8</color>
+        <color name="bg_f9f9f9">#f9f9f9</color>
+        <color name="bg_555555">#555555</color>
+        <color name="bg_b0b7bb">#b0b7bb</color>
+        <color name="button_text_pressed">#e63256</color>
+        <color name="button_text_normal">#4a5359</color>
+        <color name="_ecedef">#ECEDEF</color>
+        <color name="bg_c8e9ff_80alpha">#bbc8e9ff</color>
+        <color name="bg_ffeaa3_80alpha">#bbffeaa3</color>
+        <color name="bg_30383f">#30383f</color>
+        <color name="bg_a3d1f1">#a3d1f1</color>
+        <color name="bg_97c0de">#97c0de</color>
+        <color name="bg_37466f">#37466f</color>
+        <color name="bg_2d3959">#2d3959</color>
+        <color name="bg_e1e1e1">#e1e1e1</color>
+        <color name="bg_ececec">#ececec</color>
+        <color name="bg_323a40">#323a40</color>
+        <color name="bg_dadde0">#dadde0</color>
+        <color name="bg_7a848a">#7a848a</color>
+        <color name="bg_fb936c">#fb936c</color>
+        <color name="bg_f5f5f5">#f5f5f5</color>
+        <color name="text_red">#D80C18</color>
+        <color name="bg_e9e9e9">#e9e9e9</color>
+        <color name="bg_f21612">#f21612</color>
+        <color name="bg_00bf00">#00bf00</color>
+        <color name="bg_ff322f">#ff322f</color>
+        <color name="bg_00e004">#00e004</color>
+        <color name="bg_11a611">#11a611</color>
+        <color name="bg_c4c9cc">#c4c9cc</color>
+        <color name="bg_999999">#999999</color>
+        <color name="bg_939799">#939799</color>
+        <color name="bg_586166">#586166</color>
+        <color name="bg_b4bcc1">#b4bcc1</color>
+        <color name="bg_222e38">#222e38</color>
+
+        <color name="action_bar_bg">#F9F9F9</color>
+        <color name="action_bar_line">#B2B2B2</color>
+        <!--智能投顾-->
+        <color name="circle_hole_red">#D80C18</color>
+        <color name="circle_hole_gray">#CCCCCC</color>
+        <color name="_e6e6e6">#E6E6E6</color>
+        <color name="_f3f7f9">#F3F7F9</color>
+        <color name="_eef4f7">#EEF4F7</color>
+        <color name="_f5f8fa">#F5F8FA</color>
+        <color name="_e63256">#E63256</color>
+        <color name="_b1b1b1">#B1B1B1</color>
+        <color name="_EEF4F6">#EEF4F6</color>
+        <color name="_ededed">#ededed</color>
+        <color name="_00A881">#00A881</color>
+        <color name="_d8d9da">#D8D9DA</color>
+        <color name="_E9E9E9">#E9E9E9</color>
+        <color name="_333333_">#333333</color>
+        <color name="_cccccc_">#cccccc</color>
+        <color name="_666666_">#666666</color>
+        <color name="_e4e8eb">#E4E8EB</color>
+        <color name="_dcdcdc">#DCDCDC</color>
+        <color name="_ececec">#ECECEC</color>
+        <color name="_dadade">#DADADE</color>
+        <color name="_007aff">#007AFF</color>
+        <color name="split_line_e1e1e1">#E1E1E1</color>
+        <color name="stock_price_widget_red">#FF2B55</color>
+        <color name="stock_price_widget_grey">#666666</color>
+        <color name="stock_price_bar_bg">#D9D9D9</color>
+        <color name="stock_price_bar_bg_black">#41484c</color>
+        <color name="_adadad">#ADADAD</color>
+        <!--level2-->
+        <color name="level2_order_product_status">#e63256</color>
+        <color name="level2_order_product_font">#7a848a</color>
+        <color name="level2_order_product_background">#7a848a</color>
+        <color name="back_level2_order_product1">#FFFFFF</color>
+        <color name="back_level2_order_product2">#FAFBFC</color>
+        <color name="level2_sevice_agreement_title">#000f1a</color>
+        <color name="level2_sevice_agreement_scroll_bg">#f0f2f5</color>
+        <color name="level2_sevice_agreement_content_title">#3d464d</color>
+        <color name="level2_sevice_agreement_txt2">#000000</color>
+        <color name="level2_sevice_agreement_agree">#e63256</color>
+        <color name="level2_sevice_agreement_disagree">#e0e4e8</color>
+        <color name="level2_sevice_agreement_disagree_font">#939799</color>
+        <color name="level2_order_activate">#ffffff</color>
+        <color name="level2_order_activate_background">#ec5a3d</color>
+        <color name="level2_order_detail_none_background">#ffebe3</color>
+        <color name="level2_order_detail_in_background">#f5f8fa</color>
+        <color name="level2_order_detail_in_line">#e1e5e8</color>
+        <color name="level2_order_detail_out_study_space">#4A5359</color>
+        <color name="level2_order_pay_success_button_background">#d3d8db</color>
+        <color name="level2_order_none_font">#C3C8CD</color>
+        <color name="level2_countdown_item_bg">#BBF09130</color>
+        <color name="level2_order_item_view_line">#f0f4f7</color>
+        <color name="level2_order_list_header_line">#e1e5e8</color>
+        <color name="level2_order_activate_get_bg">#FFECE4</color>
+        <color name="_000f1a">#000F1A</color>
+        <color name="_7a848a">#7A848A</color>
+
+        <color name="stock_index">#FF7d43</color>
+        <color name="stock_us">#F28C95</color>
+        <color name="stock_future">#EAB550</color>
+        <color name="stock_hk">#D9A0F1</color>
+        <color name="stock_boud">#8B90F4</color>
+        <color name="stock_fund">#5BBFE4</color>
+        <color name="stock_option">#AAAAAA</color>
+
+        <color name="hk_hg_bg">#ff7d43</color>
+        <color name="hk_sg_bg">#2b8bee</color>
+
+
 </resources>

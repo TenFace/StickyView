@@ -7,7 +7,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,13 +17,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AbsListView;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tenface.StickyView.R;
 import com.tenface.StickyView.adapter.TravelingAdapter;
@@ -40,6 +37,7 @@ import com.tenface.StickyView.util.KickBackAnimator;
 import com.tenface.StickyView.util.ModelUtil;
 import com.tenface.StickyView.util.SystemStatusManager;
 import com.tenface.StickyView.view.FilterView;
+import com.tenface.StickyView.view.GameView.GameActivity;
 import com.tenface.StickyView.view.HeaderView.HeaderAdViewView;
 import com.tenface.StickyView.view.HeaderView.HeaderChannelViewView;
 import com.tenface.StickyView.view.HeaderView.HeaderDividerViewView;
@@ -431,18 +429,18 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         final ImageView img03 = (ImageView) view.findViewById(R.id.img_03);
         final ImageView img04 = (ImageView) view.findViewById(R.id.img_04);
         final ImageView img05 = (ImageView) view.findViewById(R.id.img_05);
-        final ImageView img06 = (ImageView) view.findViewById(R.id.img_06);
+        final ImageView game = (ImageView) view.findViewById(R.id.img_06);
         // 这几个show和close的操作千万不要用集合循环去操作，否则在显示dialog时会出现dialog闪一下就消失的情况
         showAnim(img01, 100);
         showAnim(img02, 200);
         showAnim(img03, 300);
         showAnim(img04, 400);
         showAnim(img05, 500);
-        showAnim(img06, 550);
+        showAnim(game, 550);
         img01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeAnim(img06, 300, 0);
+                closeAnim(game, 300, 0);
                 closeAnim(img05, 250, 0);
                 closeAnim(img04, 200, 0);
                 closeAnim(img03, 150, 800);
@@ -453,14 +451,14 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         img02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeAnim(img06, 300, 0);
+                closeAnim(game, 300, 0);
                 closeAnim(img05, 250, 0);
                 closeAnim(img04, 200, 0);
                 closeAnim(img03, 150, 800);
                 closeAnim(img02, 100, 800);
                 closeAnim(img01, 50, 800);
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.setClass(MainActivity.this, GameActivity.class);
                 intent.putExtra("img", "这是日历页面");
                 startActivity(intent);
             }
@@ -468,14 +466,14 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         img03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeAnim(img06, 300, 0);
+                closeAnim(game, 300, 0);
                 closeAnim(img05, 250, 0);
                 closeAnim(img04, 200, 0);
                 closeAnim(img03, 150, 800);
                 closeAnim(img02, 100, 800);
                 closeAnim(img01, 50, 800);
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.setClass(MainActivity.this, GameActivity.class);
                 intent.putExtra("img", "这是电话页面");
                 startActivity(intent);
             }
@@ -483,14 +481,14 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         img04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeAnim(img06, 300, 0);
+                closeAnim(game, 300, 0);
                 closeAnim(img05, 250, 0);
                 closeAnim(img04, 200, 0);
                 closeAnim(img03, 150, 800);
                 closeAnim(img02, 100, 800);
                 closeAnim(img01, 50, 800);
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.setClass(MainActivity.this, GameActivity.class);
                 intent.putExtra("img", "这是天气页面");
                 startActivity(intent);
             }
@@ -498,30 +496,30 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         img05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeAnim(img06, 300, 0);
+                closeAnim(game, 300, 0);
                 closeAnim(img05, 250, 0);
                 closeAnim(img04, 200, 0);
                 closeAnim(img03, 150, 800);
                 closeAnim(img02, 100, 800);
                 closeAnim(img01, 50, 800);
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.setClass(MainActivity.this, GameActivity.class);
                 intent.putExtra("img", "这是定位页面");
                 startActivity(intent);
             }
         });
 
-        img06.setOnClickListener(new View.OnClickListener() {
+        game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                closeAnim(img06, 300, 0);
+                closeAnim(game, 300, 0);
                 closeAnim(img05, 250, 0);
                 closeAnim(img04, 200, 0);
                 closeAnim(img03, 150, 800);
                 closeAnim(img02, 100, 800);
                 closeAnim(img01, 50, 800);
                 Intent intent = new Intent();
-                intent.setClass(MainActivity.this, TestActivity.class);
+                intent.setClass(MainActivity.this, GameActivity.class);
                 intent.putExtra("img", "这是设置页面");
                 startActivity(intent);
             }

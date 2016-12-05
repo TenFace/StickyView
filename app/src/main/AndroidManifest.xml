@@ -36,7 +36,7 @@
             android:name="com.tenface.StickyView.ui.activity.MenuActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.tenface.StickyView.ui.activity.TestActivity"
+            android:name="com.tenface.StickyView.view.GameView.GameActivity"
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.tenface.StickyView.ui.activity.SplashActivity"
