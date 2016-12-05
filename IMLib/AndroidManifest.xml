@@ -3,7 +3,7 @@
 
     <uses-sdk
         android:minSdkVersion="9"
-        android:targetSdkVersion="20" />
+        android:targetSdkVersion="25" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +23,7 @@
         <!-- imlib config begin -->
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="此处添加APP_KEY" />
+            android:value="8brlm7uf8psu3" />
 
         <service
             android:name="io.rong.imlib.ipc.RongService"

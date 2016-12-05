@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements SmoothListView.IS
         tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mActivity, MenuActivity.class));
+                startActivity(new Intent(mActivity, LoginActivity.class));
             }
         });
 

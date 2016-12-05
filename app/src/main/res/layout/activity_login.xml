@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="家"
+            android:textColor="@color/back_level2_order_product1"
+            android:textSize="50sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="155dp"
+            android:background="@drawable/menu_bg1" />
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/et_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@color/level2_countdown_item_bg"
+            android:textSize="22sp"
+            android:text="登       录" />
+
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/et_password"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:textColor="@color/_000f1a" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_id"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColor="@color/_000f1a" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,92 +1,84 @@
 package com.tenface.StickyView.ui.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Toast;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+
 
 import com.tenface.StickyView.R;
-import com.tenface.StickyView.view.SnakeMenuView.DividerItemDecoration;
-import com.tenface.StickyView.view.SnakeMenuView.TumblrRelativeLayout;
+
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
 
 /**
  * Created by TenFace on 16/11/30.
  */
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends ActionBarActivity {
 
-    private RecyclerView recyclerView;
-    private View.OnClickListener clickListener;
-    private View.OnClickListener menuClickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        initView();
-    }
+        String Token = "qybLFV5AV1sxBKepMUy6XZLVrxgWBHDyLg5c6la3wCFdvQg94sZ1PYJydZjL9WZpelUEcnMaJSzxGmSLskdEKg==";
+/**
+ 23         * IMKit SDK调用第二步
+ 24         *
+ 25         * 建立与服务器的连接
+ 26         *
+ 27         */
 
-    private void initView() {
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-
-        clickListener = new View.OnClickListener() {
+        RongIM.connect(Token, new RongIMClient.ConnectCallback() {
+            @Override
+            public void onTokenIncorrect() {
+                //Connect Token 失效的状态处理，需要重新获取 Token
+            }
 
             @Override
-            public void onClick(View v) {
-                Toast.makeText(MenuActivity.this, "list click " + v.getTag().toString(), Toast.LENGTH_SHORT).show();
+            public void onSuccess(String userId) {
+                Log.e("MenuActivity", "——onSuccess—-" + userId);
             }
-        };
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, -1));
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new DemoAdapter());
 
-        menuClickListener = new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Toast.makeText(MenuActivity.this, "menu click", Toast.LENGTH_LONG).show();
+            public void onError(RongIMClient.ErrorCode errorCode) {
+                Log.e("MenuActivity", "——onError—-" + errorCode);
             }
-        };
-        TumblrRelativeLayout rootLayout = (TumblrRelativeLayout) findViewById(R.id.tumblr_frame_layout);
-        rootLayout.setMenuListener(menuClickListener);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setTitle(R.string.app_name);
+        });
     }
 
-    class DemoAdapter extends RecyclerView.Adapter {
-        @Override
-        public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.main_list_item, null);
-            return new MyViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
-            MyViewHolder holder = (MyViewHolder) viewHolder;
-            holder.itemView.setTag(i);
-        }
-
-        @Override
-        public int getItemCount() {
-            return 100;
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
-    class MyViewHolder extends RecyclerView.ViewHolder {
-        public MyViewHolder(View itemView) {
-            super(itemView);
-            itemView.setOnClickListener(clickListener);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        /**
+         51         * 启动单聊
+         52         * context - 应用上下文。
+         53         * targetUserId - 要与之聊天的用户 Id。
+         54         * title - 聊天的标题，如果传入空值，则默认显示与之聊天的用户名称。
+         55         */
+        if (RongIM.getInstance() != null) {
+            RongIM.getInstance().startPrivateChat(MenuActivity.this, "2462", "hello");
         }
+
+
+        return super.onOptionsItemSelected(item);
     }
 
 
+    /**
+     * 建立与融云服务器的连接
+     *
+     * @param token
+     */
+    private void connect(String token){
 
+    }
 
 }
