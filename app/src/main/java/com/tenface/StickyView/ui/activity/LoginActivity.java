@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.tenface.StickyView.R;
 
@@ -20,6 +21,9 @@ import io.rong.imlib.RongIMClient;
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private Button bt_login;
+    private EditText et_id;
+    private EditText et_password;
+    private String test = "test";
     String Token = "qybLFV5AV1sxBKepMUy6XZLVrxgWBHDyLg5c6la3wCFdvQg94sZ1PYJydZjL9WZpelUEcnMaJSzxGmSLskdEKg==";
 
     @Override
@@ -27,11 +31,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         bt_login = (Button) findViewById(R.id.bt_login);
+        et_id = (EditText) findViewById(R.id.et_id);
+        et_password = (EditText) findViewById(R.id.et_password);
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 connect(Token);
-                Log.e(TAG, "Token:::::" + Token);
+                Log.e(TAG, "Token:::::" + Token + "::::::::" + et_id.getText() + et_password.getText());
+                if (et_id.getText().equals(test) && et_password.getText().equals(test)) {
+                    Intent intent = new Intent();
+                    intent.setClass(LoginActivity.this,MenuActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }

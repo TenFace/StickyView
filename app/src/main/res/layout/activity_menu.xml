@@ -4,5 +4,12 @@
     android:id="@+id/menu_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="登录成功"
+    android:gravity="center"
+    android:textStyle="bold"
+    android:textColor="@color/stock_index"
+    android:textSize="40sp"/>
 </RelativeLayout>
