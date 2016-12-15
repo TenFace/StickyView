@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#f27242</color>
-    <color name="colorPrimaryDark">#f27242</color>
-    <color name="colorAccent">#f27242</color>
 
     <!-- common -->
     <color name="white">#FFFFFF</color>
@@ -129,7 +126,6 @@
         <color name="caiwu_label_color">#ffb7b7b7</color>
         <color name="white_list_bg">#FFFFFF</color>
         <color name="background_gray">#ffececec</color>
-        <color name="gray">#eeeeee</color>
         <color name="_676768">#676768</color>
         <color name="stock_head_title_bg">#9b9b9c</color>
         <color name="red">#ffe50d22</color>
@@ -536,6 +532,19 @@
 
         <color name="hk_hg_bg">#ff7d43</color>
         <color name="hk_sg_bg">#2b8bee</color>
+
+    <color name="colorPrimary">#F3F3F3</color>
+    <color name="colorPrimaryDark">#F3F3F3</color>
+    <color name="colorAccent">#F3F3F3</color>
+
+    <color name="divider">#E5E5E5</color>
+    <color name="shadow">#AAEBEBEB</color>
+    <color name="common_bg">#FAFAFA</color>
+    <color name="content_bg">#F3F3F3</color>
+    <color name="gray">#8c8c8c</color>
+    <color name="gray_deep">#5c5c5c</color>
+    <color name="alpha_gray">#CC646464</color>
+    <color name="theme_gray">#646464</color>
 
 
 </resources>

@@ -21,7 +21,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.tenface.StickyView.ui.activity.MainActivity"
+            android:name="com.tenface.StickyView.ui.activity.TFMainActivity"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.MAIN"/>-->
@@ -40,6 +40,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.tenface.StickyView.view.GameView.GameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tenface.StickyView.ui.activity.CityPickerActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.tenface.StickyView.ui.activity.SplashActivity"

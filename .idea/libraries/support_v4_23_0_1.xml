@@ -11,8 +11,8 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/Android Studio 2.1/android-sdk-windows/extras/android/m2repository/com/android/support/support-v4/23.0.1/support-v4-23.0.1-sources.jar!/" />
-      <root url="jar://E:/Android Studio 2.1/android-sdk-windows/extras/android/m2repository/com/android/support/support-v4/23.0.1/support-v4-23.0.1-sources.jar!/" />
+      <root url="jar://E:/AndroidStudio2.1/android-sdk-windows/extras/android/m2repository/com/android/support/support-v4/23.0.1/support-v4-23.0.1-sources.jar!/" />
+      <root url="jar://E:/AndroidStudio2.1/android-sdk-windows/extras/android/m2repository/com/android/support/support-v4/23.0.1/support-v4-23.0.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

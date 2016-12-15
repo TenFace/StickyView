@@ -39,7 +39,7 @@ public class SplashActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(SplashActivity.this,MainActivity.class);
+                intent.setClass(SplashActivity.this,TFMainActivity.class);
                 startActivity(intent);
                 finish();
             }
