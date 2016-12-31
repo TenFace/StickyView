@@ -36,7 +36,5 @@ dependencies {
 
     compile 'com.github.clans:fab:1.6.4' //https://github.com/Clans/FloatingActionButton
 
-    compile project(':IMKit')
-
     compile files('libs/AMap_Location_v2.3.0_20160112.jar')
 }

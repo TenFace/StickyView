@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jrmfry">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/RedPacket/libs/jrmfry.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
