@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutFooter"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/main_footer_bg">
+
+    <View
+        android:id="@+id/viewSplit"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_activity_title" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_footbar_home"
+            style="@style/main_footer_bar_radio"
+            android:drawableTop="@drawable/home_page_select"
+            android:text="首页"
+            android:textSize="13sp"
+            android:textColor="@drawable/bar_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_takeout"
+            style="@style/main_footer_bar_radio"
+            android:drawableTop="@drawable/take_out_select"
+            android:text="收藏"
+            android:textSize="13sp"
+            android:textColor="@drawable/bar_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_indent"
+            style="@style/main_footer_bar_radio"
+            android:drawableTop="@drawable/indent_select"
+            android:text="消息"
+            android:textSize="13sp"
+            android:textColor="@drawable/bar_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_footbar_user"
+            style="@style/main_footer_bar_radio"
+            android:drawableTop="@drawable/user_select"
+            android:text="信息"
+            android:textSize="13sp"
+            android:textColor="@drawable/bar_text_color" />
+
+        <RadioButton
+            android:id="@+id/main_user"
+            style="@style/main_footer_bar_radio"
+            android:drawableTop="@drawable/mine_select"
+            android:text="我的"
+            android:textSize="13sp"
+            android:textColor="@drawable/bar_text_color" />
+
+    </RadioGroup>
+
+</RelativeLayout>

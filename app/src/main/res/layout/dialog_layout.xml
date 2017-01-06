@@ -2,78 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/my_dialog_style"
     android:layout_width="60dp"
-    android:layout_height="400dp">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="60dp"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true">
-
-        <ImageView
-            android:id="@+id/img_06"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="300dp"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/menu_bg1"
-            android:padding="10dp"
-            android:src="@drawable/image1" />
-
-        <ImageView
-            android:id="@+id/img_05"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="244dp"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/menu_bg5"
-            android:padding="10dp"
-            android:src="@drawable/image2" />
-
-        <ImageView
-            android:id="@+id/img_04"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="188dp"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/menu_bg4"
-            android:padding="10dp"
-            android:src="@drawable/image3" />
-
-        <ImageView
-            android:id="@+id/img_03"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="132dp"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/menu_bg3"
-            android:padding="10dp"
-            android:src="@drawable/image4" />
-
-        <ImageView
-            android:id="@+id/img_02"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="76dp"
-            android:layout_marginRight="0dp"
-            android:background="@drawable/menu_bg2"
-            android:padding="10dp"
-            android:src="@drawable/image5" />
 
         <ImageView
             android:id="@+id/img_01"
@@ -82,11 +17,70 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="70dp"
             android:layout_marginRight="0dp"
             android:background="@drawable/menu_bg6"
             android:padding="10dp"
-            android:src="@drawable/image6" />
+            android:src="@drawable/image_menu" />
+
+        <ImageView
+            android:id="@+id/img_02"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_above="@+id/img_01"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/menu_bg2"
+            android:padding="10dp"
+            android:src="@drawable/image_calendar" />
+
+        <ImageView
+            android:id="@+id/img_03"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_above="@+id/img_02"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/menu_bg3"
+            android:padding="10dp"
+            android:src="@drawable/image_phone" />
+
+        <ImageView
+            android:id="@+id/img_04"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_above="@+id/img_03"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/menu_bg4"
+            android:padding="10dp"
+            android:src="@drawable/image_weather" />
+
+        <ImageView
+            android:id="@+id/img_05"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_above="@+id/img_04"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/menu_bg5"
+            android:padding="10dp"
+            android:src="@drawable/image_loction" />
+
+        <ImageView
+            android:id="@+id/img_06"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_above="@+id/img_05"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/menu_bg1"
+            android:padding="10dp"
+            android:src="@drawable/image_setting" />
 
     </RelativeLayout>
 

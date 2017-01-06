@@ -15,6 +15,8 @@ import android.widget.ListView;
 import com.tenface.StickyView.R;
 import com.tenface.StickyView.adapter.HeaderAdAdapter;
 import com.tenface.StickyView.manager.ImageManager;
+import com.tenface.StickyView.ui.fragment.BaseFragment;
+import com.tenface.StickyView.ui.fragment.HomeFragment;
 import com.tenface.StickyView.util.DensityUtil;
 
 import java.util.ArrayList;

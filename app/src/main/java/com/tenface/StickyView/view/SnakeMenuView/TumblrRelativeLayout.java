@@ -11,7 +11,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.tenface.StickyView.R;
@@ -21,14 +20,14 @@ import java.util.List;
 
 /**
  * 该类跟普通RelativeLayout的用法是一样一样的
- **
+ * *
  * Created by TenFace on 16/11/30.
  */
 public class TumblrRelativeLayout extends RelativeLayout {
 
     private AnimateImageView topImageView;
     private List<AnimateImageView> imageViewList = new ArrayList<AnimateImageView>();
-    private int[] imageIds = {R.drawable.image1, R.drawable.image2, R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6};
+    private int[] imageIds = {R.drawable.image_setting, R.drawable.image_loction, R.drawable.image_weather, R.drawable.image_phone, R.drawable.image_calendar, R.drawable.image_menu};
     private int[] buttonColors = {R.color.float_background1, R.color.float_background2, R.color.float_background3, R.color.float_background4, R.color.float_background5, R.color.float_background6};
     private int marginBottom = 40;
     private int marginRight = 40;

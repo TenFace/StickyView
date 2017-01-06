@@ -23,4 +23,14 @@
     <string name="locating">正在定位…</string>
     <string name="located_failed">定位失败</string>
 
+
+    <string name="my_account">我的账户</string>
+    <string name="check_stock">查看信息</string>
+    <string name="free_customer_service">13521656836打给我</string>
+    <string name="system_set">系统设置</string>
+    <string name="my_invest">我的力量</string>
+    <string name="level_2_remark">30天免费特权</string>
+    <string name="my_level_2">我的商品</string>
+    <string name="now_login">立即登录</string>
+
 </resources>

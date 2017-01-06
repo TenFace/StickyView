@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_ent_gallery"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+    android:background="@color/white">
+
+    <com.tenface.StickyView.ui.loopviewpager.AutoLoopViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/base160dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_index_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/home_banner_index_mask"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <com.tenface.StickyView.ui.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
+

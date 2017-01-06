@@ -546,5 +546,6 @@
     <color name="alpha_gray">#CC646464</color>
     <color name="theme_gray">#646464</color>
 
+    <color name="main_footer_bg">#f5f5f5</color>
 
 </resources>
