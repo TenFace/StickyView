@@ -32,6 +32,22 @@ public class ModelUtil {
         return adList;
     }
 
+    //URL数据
+    public static List<String> getLiveUrl() {
+        List<String> liveList = new ArrayList<>();
+        liveList.add("rtmp://live.hkstv.hk.lxdns.com/live/hks");//香港卫视
+        liveList.add("rtmp://live.mastv.cc:1935/live/live1");
+        liveList.add("rtmp://219.232.160.122/livestream/d59fa94440cc2669b1bdb5ec7d5fc78b");//河南卫视
+        liveList.add("rtmp://219.232.160.121/livestream/0e60e1dd7fb4237dce7adbaf41c44d64");
+        liveList.add("rtmp://219.232.160.122/livestream/3b786ebe62277605c47071b0621245da");
+        liveList.add("rtmp://219.232.160.122/livestream/d46024701fdfe213f7e7dd8e4fb9a1d2");
+        liveList.add("rtmp://live.hkstv.hk.lxdns.com/live/hks");//香港卫视
+        liveList.add("rtmp://live.hkstv.hk.lxdns.com/live/hks");//香港卫视
+        liveList.add("rtmp://live.hkstv.hk.lxdns.com/live/hks");//香港卫视
+        liveList.add("rtmp://live.hkstv.hk.lxdns.com/live/hks");//香港卫视
+        return liveList;
+    }
+
     // 频道数据
     public static List<ChannelEntity> getChannelData() {
         List<ChannelEntity> channelList = new ArrayList<>();

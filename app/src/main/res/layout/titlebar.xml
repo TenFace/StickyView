@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="@dimen/base40dp"
+        android:layout_height="@dimen/base40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/qr_code" />
+
+    <EditText
+        android:id="@+id/rtmpUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/btnScan"
+        android:background="@drawable/input_box"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true" />
+</RelativeLayout>

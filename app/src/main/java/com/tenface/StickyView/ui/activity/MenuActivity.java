@@ -1,21 +1,18 @@
 package com.tenface.StickyView.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.tenface.StickyView.R;
 import com.tenface.StickyView.ui.fragment.FragmentInstanceManager;
 import com.tenface.StickyView.ui.fragment.HomeFragment;
-import com.tenface.StickyView.ui.fragment.IndentFragment;
+import com.tenface.StickyView.ui.fragment.PlayFragment;
 import com.tenface.StickyView.ui.fragment.MessageFragment;
 import com.tenface.StickyView.ui.fragment.TakeOutFragment;
 import com.tenface.StickyView.ui.fragment.UserFragment;
@@ -49,10 +46,6 @@ public class MenuActivity extends BaseFragmentActivity implements RadioGroup.OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //透明状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        //透明导航栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
 
@@ -93,7 +86,7 @@ public class MenuActivity extends BaseFragmentActivity implements RadioGroup.OnC
                 break;
             //消息
             case R.id.main_footbar_indent:
-                switchFragment(FragmentInstanceManager.getInstance().getFragment(IndentFragment.class));
+                switchFragment(FragmentInstanceManager.getInstance().getFragment(PlayFragment.class));
                 break;
             //信息
             case R.id.main_footbar_user:
